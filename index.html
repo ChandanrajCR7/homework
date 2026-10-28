@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f4">
+    <meta name="description" content="Turn your images into a polished PDF in seconds. Free, private, and processed right in your browser.">
+    <title>Paperplane — Image to PDF</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Paperplane home">
+        <span class="brand-mark" aria-hidden="true">↗</span>
+        <span>paperplane</span>
+      </a>
+      <div class="topbar-note"><span class="privacy-dot"></span> Your files never leave your device</div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="eyebrow"><span class="eyebrow-line"></span> SIMPLE. PRIVATE. FREE.</div>
+        <h1>Images in.<br><span>PDF out.</span></h1>
+        <p>Bring your pictures together in one beautiful document.<br class="desktop-break"> No account, no uploads, no fuss.</p>
+      </section>
+
+      <section class="converter" aria-label="Image to PDF converter">
+        <div class="converter-heading">
+          <div>
+            <h2>Make your PDF</h2>
+            <p>Add one or more images to get started.</p>
+          </div>
+          <div class="format-pill"><span>JPG</span><span>PNG</span><span>WEBP</span><span>GIF</span></div>
+        </div>
+
+        <label class="dropzone" id="dropzone" for="file-input" tabindex="0">
+          <input id="file-input" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple>
+          <span class="upload-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M4.5 15.5v3A1.5 1.5 0 0 0 6 20h12a1.5 1.5 0 0 0 1.5-1.5v-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="drop-title">Drop your images here</span>
+          <span class="drop-subtitle">or <span class="browse-link">browse files</span> from your device</span>
+          <span class="drop-footnote">JPG, PNG, WEBP or GIF · Multiple files welcome</span>
+        </label>
+
+        <div class="file-area" id="file-area" hidden>
+          <div class="file-area-heading">
+            <div class="file-count" id="file-count"></div>
+            <button type="button" class="text-button" id="clear-button">Remove all</button>
+          </div>
+          <ul class="file-list" id="file-list" aria-live="polite"></ul>
+        </div>
+
+        <div class="settings-row">
+          <label class="setting-label" for="page-size">Page size</label>
+          <div class="select-wrap">
+            <select id="page-size" aria-label="PDF page size">
+              <option value="a4">A4</option>
+              <option value="letter">US Letter</option>
+            </select>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="setting-hint">Images are fitted and centered on each page</span>
+        </div>
+
+        <button class="convert-button" id="convert-button" type="button" disabled>
+          <span id="convert-label">Create PDF</span>
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.5 10h11m0 0-4.5-4.5M15.5 10 11 14.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="status-message" id="status-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <div class="trust-row">
+        <span><span class="trust-icon">✓</span> 100% in your browser</span>
+        <span><span class="trust-icon">✓</span> No file limits</span>
+        <span><span class="trust-icon">✓</span> Always free</span>
+      </div>
+    </main>
+
+    <footer><span>Made for the little things.</span><span>Private by design <span class="footer-heart">♥</span></span></footer>
+  </body>
+</html>
