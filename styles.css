@@ -17,7 +17,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--canvas);
-  font-family: "DM Sans", sans-serif;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -38,7 +38,7 @@ button, select { font: inherit; }
   gap: 10px;
   color: var(--ink);
   text-decoration: none;
-  font: 800 19px "Manrope", sans-serif;
+  font: 800 19px Inter, ui-sans-serif, system-ui, sans-serif;
   letter-spacing: -1px;
 }
 
@@ -50,7 +50,7 @@ button, select { font: inherit; }
   border-radius: 9px;
   color: white;
   background: var(--green);
-  font: 700 18px "DM Sans", sans-serif;
+  font: 700 18px Inter, ui-sans-serif, system-ui, sans-serif;
   transform: rotate(-8deg);
 }
 
@@ -61,7 +61,7 @@ main { width: min(100% - 40px, 620px); margin: 0 auto; padding: 54px 0 36px; }
 .intro { margin-bottom: 30px; text-align: center; }
 .eyebrow { display: flex; justify-content: center; align-items: center; gap: 9px; color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: 1.5px; }
 .eyebrow-line { width: 18px; height: 1px; background: #76a68e; }
-h1 { margin: 17px 0 13px; font: 800 clamp(42px, 8vw, 58px)/1.07 "Manrope", sans-serif; letter-spacing: -3.4px; }
+h1 { margin: 17px 0 13px; font: 800 clamp(42px, 8vw, 58px)/1.07 Inter, ui-sans-serif, system-ui, sans-serif; letter-spacing: -3.4px; }
 h1 span { color: var(--green); }
 .intro p { margin: 0; color: #737d77; font-size: 14px; line-height: 1.7; }
 
@@ -74,7 +74,7 @@ h1 span { color: var(--green); }
 }
 
 .converter-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 19px; }
-h2 { margin: 0 0 4px; font: 700 16px "Manrope", sans-serif; letter-spacing: -.3px; }
+h2 { margin: 0 0 4px; font: 700 16px Inter, ui-sans-serif, system-ui, sans-serif; letter-spacing: -.3px; }
 .converter-heading p { margin: 0; color: #8a938e; font-size: 12px; }
 .format-pill { display: flex; gap: 4px; }
 .format-pill span { padding: 5px 7px; border: 1px solid #e8ede8; border-radius: 5px; color: #68776d; font-size: 8px; font-weight: 700; letter-spacing: .3px; }

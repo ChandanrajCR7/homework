@@ -141,14 +141,15 @@ async function createPdf() {
     letter: [612, 792],
   };
   const [pageWidth, pageHeight] = paperSizes[pageSizeSelect.value];
+  const selectedFiles = images.map((image) => image.file);
   const pageObjects = [];
   const objectBytes = [];
 
   objectBytes[1] = ascii("<< /Type /Catalog /Pages 2 0 R >>");
 
-  for (let index = 0; index < images.length; index += 1) {
-    setStatus(`Preparing image ${index + 1} of ${images.length}…`);
-    const raster = await imageToJpeg(images[index].file);
+  for (let index = 0; index < selectedFiles.length; index += 1) {
+    setStatus(`Preparing image ${index + 1} of ${selectedFiles.length}…`);
+    const raster = await imageToJpeg(selectedFiles[index]);
     const imageObjectNumber = 5 + index * 3;
     const pageObjectNumber = 3 + index * 3;
     const contentObjectNumber = 4 + index * 3;
